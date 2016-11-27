@@ -79,7 +79,7 @@ public class MainActivity extends ActionBarActivity implements
     //This is for the versions 6.0+
     public static final int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
     private boolean checkAndRequestPermissions(){
-        int coarse = ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION);
+
         int fine = ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION);
 
         List<String> listPermissionsNeeded = new ArrayList<>();
@@ -100,7 +100,7 @@ public class MainActivity extends ActionBarActivity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         //This is for the versions 6.0+
         checkAndRequestPermissions();
 
